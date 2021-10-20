@@ -48,5 +48,27 @@ To do all of this is a line, I can just do this
 ```
 .name() method can be omitted as I am not storing the result.
 #
-
+### Enums
+Enums are class like special datatype that represent a group immutable constants. They are public, static and final. They also can have attributes and methods. TO create them,
+```
+    enum Weekday {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY, 
+        THURSDAY,
+        FRIDAY
+    }
+```
+To access them, we need to use dot syntax
+```
+    Weekday day = Weekday.MONDAY;
+```
+Enums have a method called .values(). This method wil return all of the values in the enum as an array. This is useful if we want to loop through the values in the enum. Note that the datatype declaration will be the name of the enum. Like so
+```
+    for(Weekday days:Weekday.values()){
+        statements;
+    }
+```
+<br>
+*Edited 20/10/2021*
 
