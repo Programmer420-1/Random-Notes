@@ -21,4 +21,32 @@ We can just apply the concept of converting Int to String. It is the same concep
     int anIntegerFromString = Integer.parseInt("10");
     double aDoubleFromString = Double.parseDouble("3.14");
 ```
+#
+### LocalDate Class
+__NEVER__ learnt this before. This is the first time I encounter this class. I may be wrong for my understandings on this part of lesson. So here's what I got.
+
+In order to use this class, we have to import the class into our program first. 
+```
+    import java.time.LocalDate;
+```
+Then, we will need to instantiate a LocalDate object in a variable. Like so
+```
+    LocalDate dt;
+```
+Lets say, I want to know about the day of a week in a particular month of a particular year. I can just do this:
+```
+    LocalDate gt = LocalDate.of(y,m,d);
+    String dayName = dt.getDayOfWeek().name();
+```
+First line of code will return an instance of LocalDate class from the input of year,month and day. Note that all year, month and day are passed into the method as integer.
+<br>
+Second line of code will store the name of the day. Things to keep in mind is the .getDayOfWeek() method will return a enum instead of a string. Thus we need to use .name() method from enum class to convert the value into a string and to be stored.
+<br>
+To do all of this is a line, I can just do this
+```
+    System.out.println(LocalDate.of(y,m,d).getDayOfWeek());
+```
+.name() method can be omitted as I am not storing the result.
+#
+
 
