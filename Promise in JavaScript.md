@@ -30,11 +30,14 @@ Three of them are usually accepting functions as argument to carry out consecuti
     //not chained promise method
     const aPromise = new Promise((resolve,reject)=>{code block}).then(expression);
     //chained promise method
-    const aPromise = new Promise((resolve,reject)=>{code block}).then().then.then();
+    const aPromise = new Promise((resolve,reject)=>{code block}).then().then().then();
 ```
 <br><br>
 #### ` .catch()` Method
 ` .catch()` method is used when we want to catch the exception during our code execution in Promise. The method will accept the exception returned from the Promise and perform Exception Handling.
+
+<br><br>
+*Edited 22/10/2021*
 
 
 
