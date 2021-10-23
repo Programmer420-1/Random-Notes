@@ -48,4 +48,41 @@ Console:
 As we can see, we just write 1 method for arguments of different datatype and the code doesn't break while plugging 4 of those test values into the method.
 
 ## Generic Class
-Besides generic method, we also have generic class.
+Besides generic method, we also have a generic class. ArrayList class is a good generic class example. By inserting the class of datatype we want to use into the `<>`, we can create a dynamic array of desired datatype with a lot of functionality. Just like this:
+```
+    ArrayList<String> arr = new ArrayList<String>();
+```
+The idea of how to create a generic class is almost the same as creating a generic method. The following code is how to achieve that.
+```
+    class printElemArray<T>{
+        private T[] arr;
+        
+        printElemArray(T[] arr){
+            this.arr = arr;
+        }
+
+        public void printAll(){
+            for (int i = 0; i < arr.length ; i++){
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    class Main {
+        public static void main(String[] args){
+            Integer[] array1 = {1,2,3,4,5,6,7};
+            Character[] array2 = {'A','B','C','D','E','F','G'};
+            Double[] array3 = {1.1,2.2,3.3,4.4,5.5,6.6,7.7};
+            printElemArray<Integer> arr1 = new printElemArray<>(array1);
+            printElemArray<Character> arr2 = new printElemArray<>(array2);
+            printElemArray<Double> arr3 = new printElemArray<>(array3);
+            arr1.printAll();
+            arr2.printAll();
+            arr3.printAll();
+        }
+    }
+```
+Thats it, a generic class which you pass in all datatypes as argument and it doesn't need a lot of implementation!
+#
+## Generic Bounded Type Parameters
