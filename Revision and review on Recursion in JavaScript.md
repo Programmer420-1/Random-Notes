@@ -28,7 +28,7 @@ function countup(n){
 }
 ```
  
- ![Recursion](https://www.edureka.co/blog/wp-content/uploads/2019/08/2019-08-06-12_31_29-Window.png) 
+ ![Recursion](https://aws1.discourse-cdn.com/freecodecamp/original/3X/b/3/b398443aa03613780e02adf73235141e42ec2e3e.png) 
 
 As the first card in last card out rule applies, the array return will be [1,2,3,4,5] instead of [5,4,3,2,1]. Thus to inverse the sequence, we just have to
 use arr.unshift(n) instead of arr.push(n)
