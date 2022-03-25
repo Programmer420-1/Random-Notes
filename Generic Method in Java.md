@@ -84,5 +84,3 @@ The idea of how to create a generic class is almost the same as creating a gener
     }
 ```
 Thats it, a generic class which you pass in all datatypes as argument and it doesn't need a lot of implementation!
-#
-## Generic Bounded Type Parameters
