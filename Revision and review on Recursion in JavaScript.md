@@ -15,7 +15,7 @@ function, the last function called will be invoked first. __[The first card in, 
 ```
 For example, below is an recursive function that will return an array of numbers of the first n numbers from 1 __inclusively__:
 
-```
+```js
 function countup(n){
     if (n <= 0){
         return [] //base case, an empty array is return to be filled by last function called.
@@ -27,10 +27,10 @@ function countup(n){
     }
 }
 ```
-
-visual reference please refer to https://drive.google.com/file/d/1m2L-KAX8qoMJqO9v6LQBxEEzbQvrpYgT/view?usp=sharing 
+ 
+ ![Recursion](https://www.edureka.co/blog/wp-content/uploads/2019/08/2019-08-06-12_31_29-Window.png) 
 
 As the first card in last card out rule applies, the array return will be [1,2,3,4,5] instead of [5,4,3,2,1]. Thus to inverse the sequence, we just have to
 use arr.unshift(n) instead of arr.push(n)
 
-*Date Edited: 18/10/2021*
+*Date Edited: 25/3/2022*
