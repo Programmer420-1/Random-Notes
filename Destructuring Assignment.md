@@ -5,7 +5,7 @@ Today I continued to learn ES6 on FreeCodeCamp and the destructuring assignment 
 I never thought extracting values of an object could be so clean and easy. This is how I extract the values of an object 
 before:
 
-```
+```js
     // object declaration
     var obj = {name : Alex, age : 14};
     // extracting the values
@@ -15,7 +15,7 @@ before:
 
 This is how I extract the values of an object after i learned destructing assignment:
 
-```
+```js
     //object declaration
     var obj = {name : Alex, age : 14};
     // extracting by destructing assignment
@@ -30,7 +30,7 @@ This is it? No. Destructuring assignment can also be used to unpack specific val
 I will present my understanding with following example.
 
 ###### Consider this simple object with multiple properties
-```
+```js
     const obj = {
         median:40,
         max:90,
@@ -41,19 +41,19 @@ I will present my understanding with following example.
 Before i learn this lesson, I will assign the min and max values of the object into a variable first then only I will insert them
 into the function as arguments. Like this:
 
-```
+```js
     const max = obj.max;
     const min = obj.min;
     console.log((max,min)=>(max+min)/2);
 ```
 But with destructuring assignment, I can just do this and obtain the same result
 
-```
+```js
     console.log(({max,min})=>(max+min)/2);
 ```
 However, I still prefer to do this to prevent any misassignment of object property
 
-```
+```js
     const {min,max} = obj;
     console.log((min,max)=>(max+min)/2);
 ```
@@ -64,7 +64,7 @@ Well, quick recap on myself.
 
 So, by doing this, I can store the left over values of an object for future use after I used Destructuring assignment.
 
-```
+```js
     const {min,max,...leftOver} = obj;
     // leftover will pointing to an array storing [40,100]
 ```
@@ -76,16 +76,16 @@ This is different from using the spread parameter that will unpack all the eleme
 
 By incorporating destructuring assignment with the rest parameter, we can slice an array into 2 will minimal effort.
 
-```
+```js
     const [a,b,...arr] = [1,2,3,4,5,6];
     arr1 = [a,b]
     //arr will store [3,4,5,6]
 ```
 Swapping of the values of 2 variables also can be made simple
 
-```
+```js
     var x = 1, y = 5;
     [y,x] = [x,y];
 ```
 
-*Edited 19/10/2021*
+*Edited 25/3/2022*
