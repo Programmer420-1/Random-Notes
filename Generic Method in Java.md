@@ -49,7 +49,7 @@ As we can see, we just write 1 method for arguments of different datatype and th
 
 ## Generic Class
 Besides generic method, we also have a generic class. ArrayList class is a good generic class example. By inserting the class of datatype we want to use into the `<>`, we can create a dynamic array of desired datatype with a lot of functionality. Just like this:
-```
+```java
     ArrayList<String> arr = new ArrayList<String>();
 ```
 The idea of how to create a generic class is almost the same as creating a generic method. The following code is how to achieve that.
