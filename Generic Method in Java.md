@@ -1,7 +1,7 @@
 # Generic Methods in Java
 ## Introduction
 One day I was think about how can I not implement the same methods which have the same functionality for couple of time just to ensure the method is still functionable despite the datatypes keyed in by the user is different. For example, to implement an addition method, we need to take all numbers datatype (integer, double, float) into considerations. Here's how I do it with method overriding:
-```
+```java
     static int addition(int a,int b){
         return a+b;
     }
@@ -18,7 +18,7 @@ Look, three of the methods serve the same functionality which is return the valu
 <br><br>
 ## Generic Methods
 Generic methods are methods that introduce their own type parameter. The type parameter is then replaced with actual concrete type during generic instantiation.With generic methods, we can overcome this issues with ease. We are able to implement just a method and the method is able to process the arguments and return value of different datatype.
-```
+```java
     public static <T> boolean isEquivalent(T a, T b){
         if(a.equals(b)){
             return true;
@@ -53,7 +53,7 @@ Besides generic method, we also have a generic class. ArrayList class is a good 
     ArrayList<String> arr = new ArrayList<String>();
 ```
 The idea of how to create a generic class is almost the same as creating a generic method. The following code is how to achieve that.
-```
+```java
     class printElemArray<T>{
         private T[] arr;
         
